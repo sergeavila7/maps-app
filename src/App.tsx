@@ -1,10 +1,14 @@
-import './App.css';
+import { MapProvider, PlacesProvider } from './context';
+import { HomeScreen } from './pages/HomeScreen';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-    </div>
+    <PlacesProvider>
+      <MapProvider>
+        <HomeScreen />
+      </MapProvider>
+    </PlacesProvider>
   );
 }
 
