@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import { PlacesState } from './PlacesProvider';
 
 type PlacesAction = {
     type: 'setUserLocation', payload:[number,number]
 }
 
-export const placesReducer:FC<PlacesState> = (state: PlacesState, action:PlacesAction)=>{
+export const placesReducer = (state: PlacesState, action:PlacesAction): PlacesState=>{
     switch (action.type) {
         case 'setUserLocation':
             

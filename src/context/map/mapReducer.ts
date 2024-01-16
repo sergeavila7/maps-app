@@ -1,18 +1,17 @@
-import { FC } from 'react';
 import { MapState } from './MapProvider';
 import { Map } from 'mapbox-gl';
 
 type MapAction = {
-    type: 'setMap', payload: Map
-}
+  type: 'setMap';
+  payload: Map;
+};
 
-export const mapReducer:FC<MapState> = (state: MapState, action:MapAction)=>{
-    switch (action.type) {
-        case 'setMap':
-            
-      return state
-    
-        default:
-            return state
-    }
-}
+export const mapReducer = (state: MapState, action: MapAction): MapState => {
+  switch (action.type) {
+    case 'setMap':
+      return { ...state, isMapReady: true, map: action.payload };
+
+    default:
+      return state;
+  }
+};
