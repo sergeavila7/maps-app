@@ -1,5 +1,5 @@
 import { MapProvider, PlacesProvider } from './context';
-import { HomeScreen } from './pages/HomeScreen';
+import { HomeScreen } from './screens/HomeScreen';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
